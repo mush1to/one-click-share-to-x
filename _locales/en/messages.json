@@ -50,9 +50,6 @@
   "resetDone": {
     "message": "Reset to default"
   },
-  "contextOpenOptions": {
-    "message": "Open options"
-  },
   "openModeLabel": {
     "message": "Open post editor in"
   },

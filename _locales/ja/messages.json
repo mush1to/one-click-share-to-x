@@ -15,7 +15,7 @@
     "message": "表示言語"
   },
   "languageHint": {
-    "message": "このオプション画面の表示言語を選びます。SystemはChromeの言語に従います。"
+    "message": "このオプション画面の表示言語を選びます。Systemを選択した場合は、Chromeの言語設定に従います。"
   },
   "templateLabel": {
     "message": "テンプレート"
@@ -24,7 +24,7 @@
     "message": "使用可能: {title}, {url}, {hashtags}。改行: 実改行、\\n、/n。"
   },
   "templateExamples": {
-    "message": "{title}\\n{url}\n{title}\\n{url}\\n#music #bookmark\n聴いた: {title}\\n{url}"
+    "message": "{title}\\n{url}\n{title}\\n{url}\\n#music #bookmark\nリスニング中: {title}\\n{url}"
   },
   "hashtagsLabel": {
     "message": "固定ハッシュタグ（任意）"
@@ -49,9 +49,6 @@
   },
   "resetDone": {
     "message": "デフォルトに戻しました"
-  },
-  "contextOpenOptions": {
-    "message": "オプションを開く"
   },
   "openModeLabel": {
     "message": "投稿画面の開き方"
