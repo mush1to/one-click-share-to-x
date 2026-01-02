@@ -2,6 +2,7 @@
 
 A lightweight Chrome extension that opens X’s post composer with the **current tab’s title and URL** — in **one click**.
 
+- ✅ Open Source
 - ✅ No X API / no authentication
 - ✅ Works out of the box (no setup required)
 - ✅ Customizable template + fixed hashtags
