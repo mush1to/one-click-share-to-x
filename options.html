@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Options</title>
+      <link rel="icon" href="icons/icon16.png" sizes="16x16" />
+      <link rel="icon" href="icons/icon48.png" sizes="48x48" />
+    <link rel="stylesheet" href="options.css" />
+  </head>
+  <body>
+    <main class="wrap">
+      <header class="header">
+        <h1 data-i18n="optionsTitle">Options</h1>
+        <p class="sub" data-i18n="optionsSubtitle">Configure how the post text is generated.</p>
+      </header>
+
+      <section class="card">
+        <div class="row">
+          <div class="col">
+            <label class="label" for="language"><span data-i18n="languageLabel">Language</span></label>
+            <select id="language" class="select"></select>
+            <p class="hint" data-i18n="languageHint">Choose UI language for this options page. “System” follows your Chrome language.</p>
+          </div>
+          <div class="col">
+            <label class="label" for="hashtags"><span data-i18n="hashtagsLabel">Fixed hashtags (optional)</span></label>
+            <input id="hashtags" class="input" type="text" placeholder="#music #bookmark" />
+            <p class="hint" data-i18n="hashtagsHint">If {hashtags} is in the template, it will be inserted there. Otherwise it will be appended.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="card">
+        <label class="label" for="template"><span data-i18n="templateLabel">Template</span></label>
+        <textarea id="template" class="textarea" rows="6" spellcheck="false"></textarea>
+
+        <div class="examples">
+          <p class="hint" data-i18n="templateHelp">Use {title}, {url}, {hashtags}. Newlines: actual line breaks, \n, or /n.</p>
+          <pre class="example" id="templateExamples"></pre>
+        </div>
+      </section>
+
+      <section class="card">
+        <div class="row">
+          <div class="col">
+            <h2 class="h2" data-i18n="previewLabel">Preview</h2>
+            <p class="hint" data-i18n="previewHint">This is a preview using sample title and URL.</p>
+          </div>
+        </div>
+        <textarea id="preview" class="textarea preview" rows="6" readonly></textarea>
+      </section>
+
+      <footer class="footer">
+        <div class="credit">Created by むしにゃんこ (Tip: <a href="https://streamlabs.com/mush1to/tip" target="_blank" rel="noreferrer">streamlabs.com/mush1to/tip</a>)</div>
+      </footer>
+    </main>
+
+    <div class="actionbar" role="region" aria-label="Actions">
+      <div class="actionbar-inner">
+        <div id="status" class="status" aria-live="polite"></div>
+        <div class="spacer"></div>
+        <button id="reset" class="btn secondary" type="button" data-i18n="resetButton">Reset</button>
+        <button id="save" class="btn primary" type="button" data-i18n="saveButton">Save</button>
+      </div>
+    </div>
+
+    <script src="options.js" type="module"></script>
+  </body>
+</html>

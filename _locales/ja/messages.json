@@ -1,0 +1,68 @@
+{
+  "appName": {
+    "message": "Xにワンクリック共有"
+  },
+  "appDesc": {
+    "message": "現在のページのタイトルとURLをワンクリックでXの投稿画面に入れます。"
+  },
+  "optionsTitle": {
+    "message": "オプション"
+  },
+  "optionsSubtitle": {
+    "message": "投稿テキストの生成方法を設定します。"
+  },
+  "languageLabel": {
+    "message": "表示言語"
+  },
+  "languageHint": {
+    "message": "このオプション画面の表示言語を選びます。SystemはChromeの言語に従います。"
+  },
+  "templateLabel": {
+    "message": "テンプレート"
+  },
+  "templateHelp": {
+    "message": "使用可能: {title}, {url}, {hashtags}。改行: 実改行、\\n、/n。"
+  },
+  "templateExamples": {
+    "message": "{title}\\n{url}\n{title}\\n{url}\\n#music #bookmark\n聴いた: {title}\\n{url}"
+  },
+  "hashtagsLabel": {
+    "message": "固定ハッシュタグ（任意）"
+  },
+  "hashtagsHint": {
+    "message": "テンプレートに{hashtags}があればそこへ挿入、無ければ末尾に追加します。"
+  },
+  "previewLabel": {
+    "message": "プレビュー"
+  },
+  "previewHint": {
+    "message": "サンプルのタイトルとURLで表示しています。"
+  },
+  "saveButton": {
+    "message": "保存"
+  },
+  "resetButton": {
+    "message": "デフォルトに戻す"
+  },
+  "saved": {
+    "message": "保存しました"
+  },
+  "resetDone": {
+    "message": "デフォルトに戻しました"
+  },
+  "contextOpenOptions": {
+    "message": "オプションを開く"
+  },
+  "openModeLabel": {
+    "message": "投稿画面の開き方"
+  },
+  "openModeHint": {
+    "message": "新しいタブで開くか、ポップアップウィンドウで開くかを選べます。"
+  },
+  "openModeTab": {
+    "message": "新しいタブ"
+  },
+  "openModePopup": {
+    "message": "ポップアップ"
+  }
+}

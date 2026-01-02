@@ -1,0 +1,68 @@
+{
+  "appName": {
+    "message": "One-Click Share to X"
+  },
+  "appDesc": {
+    "message": "Post the current page title and URL to X in one click."
+  },
+  "optionsTitle": {
+    "message": "Options"
+  },
+  "optionsSubtitle": {
+    "message": "Configure how the post text is generated."
+  },
+  "languageLabel": {
+    "message": "Language"
+  },
+  "languageHint": {
+    "message": "Choose UI language for this options page. “System” follows your Chrome language."
+  },
+  "templateLabel": {
+    "message": "Template"
+  },
+  "templateHelp": {
+    "message": "Use {title}, {url}, {hashtags}. Newlines: actual line breaks, \\n, or /n."
+  },
+  "templateExamples": {
+    "message": "{title}\\n{url}\n{title}\\n{url}\\n#music #bookmark\nListening: {title}\\n{url}"
+  },
+  "hashtagsLabel": {
+    "message": "Fixed hashtags (optional)"
+  },
+  "hashtagsHint": {
+    "message": "If {hashtags} is in the template, it will be inserted there. Otherwise it will be appended."
+  },
+  "previewLabel": {
+    "message": "Preview"
+  },
+  "previewHint": {
+    "message": "This is a preview using sample title and URL."
+  },
+  "saveButton": {
+    "message": "Save"
+  },
+  "resetButton": {
+    "message": "Reset"
+  },
+  "saved": {
+    "message": "Saved"
+  },
+  "resetDone": {
+    "message": "Reset to default"
+  },
+  "contextOpenOptions": {
+    "message": "Open options"
+  },
+  "openModeLabel": {
+    "message": "Open post editor in"
+  },
+  "openModeHint": {
+    "message": "Choose whether to open X in a new tab or a popup window."
+  },
+  "openModeTab": {
+    "message": "New tab"
+  },
+  "openModePopup": {
+    "message": "Popup window"
+  }
+}
