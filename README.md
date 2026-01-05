@@ -21,6 +21,10 @@ When you click the extension icon, it reads the active tab’s:
 
 You can edit the text in X’s composer and post normally.
 
+## Install (Chrome Web Store)
+
+- Chrome Web Store: https://chromewebstore.google.com/detail/lhllhjnpcnbomhkabcindkjchkknjnij
+
 ## Install (Manual / Developer Mode)
 
 1. Download and unzip the extension folder.
