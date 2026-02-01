@@ -6,6 +6,7 @@ A lightweight Chrome extension that opens X’s post composer with the **current
 - ✅ No X API / no authentication
 - ✅ Works out of the box (no setup required)
 - ✅ Customizable template + fixed hashtags
+- ✅ **Domain/Path-specific templates** — customize templates per website (e.g., youtube.com/watch vs google.com)
 - ✅ Options UI supports **System / English / Japanese** (extensible)
 
 ## How it works
@@ -81,6 +82,42 @@ Listening: {title}
 - If your template contains `{hashtags}`, the extension inserts your fixed hashtags there.
 - If your template does **not** contain `{hashtags}`, the extension appends the hashtags to the end (on a new line).
 
+### Domain/Path Templates
+
+You can create different templates for specific domains or even specific paths within a domain. This is useful when you want different posting formats for different websites.
+
+**Priority Order** (highest to lowest):
+
+1. **Full domain + path match** — `youtube.com/watch` matches exactly `youtube.com/watch`
+2. **Path prefix match** — `youtube.com/watch` matches `youtube.com/watch?v=xxx`
+3. **Exact domain match** — `mail.google.com`
+4. **Parent domain fallback** — `google.com` matches `mail.google.com` or `drive.google.com`
+5. **Default template** — used when no specific template matches
+
+**How to use:**
+
+1. Open the Options page
+2. Click **"Add Domain/Path"**
+3. Enter a domain (e.g., `youtube.com`) or domain+path (e.g., `youtube.com/watch`)
+4. Customize the template for that specific site
+5. Save your settings
+
+**Examples:**
+
+```
+Template registrations:
+- youtube.com/watch      → "Watching: {title}"
+- youtube.com            → "YouTube: {title}"
+- mail.google.com        → "Gmail: {title}"
+- google.com             → "Google: {title}"
+
+Behavior:
+- youtube.com/watch?v=xxx     → "Watching: ..." (exact path match)
+- youtube.com/shorts/xxx      → "YouTube: ..."  (no path match, uses parent domain)
+- mail.google.com/inbox       → "Gmail: ..."    (exact domain match)
+- drive.google.com            → "Google: ..."   (parent domain fallback)
+```
+
 ## Language (System / English / Japanese)
 
 The options page lets you choose its UI language:
@@ -113,7 +150,7 @@ That’s it — the new language will appear in the language dropdown automatica
 This extension uses:
 
 - `activeTab` — read the active tab’s title and URL when you click the icon
-- `storage` — save options (template, hashtags, UI language choice)
+- `storage` — save options (template, hashtags, UI language choice, domain/path-specific templates)
 
 No external servers are used.
 

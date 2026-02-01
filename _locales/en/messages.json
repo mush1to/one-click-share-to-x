@@ -61,5 +61,41 @@
   },
   "openModePopup": {
     "message": "Popup window"
+  },
+  "domainLabel": {
+    "message": "Domain/Path Template"
+  },
+  "defaultTemplateOption": {
+    "message": "Default (All domains)"
+  },
+  "addDomainButton": {
+    "message": "Add Domain/Path"
+  },
+  "removeDomainButton": {
+    "message": "Remove"
+  },
+  "domainHint": {
+    "message": "Select a domain or domain+path to customize the template for specific websites. Examples: \"google.com\", \"mail.google.com\", \"youtube.com/watch\""
+  },
+  "addDomainPrompt": {
+    "message": "Enter domain or domain+path (e.g., example.com, mail.google.com, youtube.com/watch):"
+  },
+  "invalidDomain": {
+    "message": "Invalid format. Use: example.com or example.com/path"
+  },
+  "domainAdded": {
+    "message": "Domain/Path added (save to apply)"
+  },
+  "removeDomainConfirm": {
+    "message": "Remove template for"
+  },
+  "domainRemoved": {
+    "message": "Domain/Path removed (save to apply)"
+  },
+  "resetConfirm": {
+    "message": "Reset all settings to default?\nThis will remove all domain/path-specific templates."
+  },
+  "previewUrlLabel": {
+    "message": "Sample URL:"
   }
 }

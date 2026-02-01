@@ -20,7 +20,7 @@
           <div class="col">
             <label class="label" for="language"><span data-i18n="languageLabel">Language</span></label>
             <select id="language" class="select"></select>
-            <p class="hint" data-i18n="languageHint">Choose UI language for this options page. “System” follows your Chrome language.</p>
+            <p class="hint" data-i18n="languageHint">Choose UI language for this options page. "System" follows your Chrome language.</p>
           </div>
           <div class="col">
             <label class="label" for="hashtags"><span data-i18n="hashtagsLabel">Fixed hashtags (optional)</span></label>
@@ -31,6 +31,18 @@
       </section>
 
       <section class="card">
+        <div class="domain-template-header">
+          <label class="label" for="domainSelect"><span data-i18n="domainLabel">Domain/Path Template</span></label>
+          <div class="domain-controls">
+            <select id="domainSelect" class="select">
+              <option value="" data-i18n="defaultTemplateOption">Default (All domains)</option>
+            </select>
+            <button id="addDomainBtn" class="btn secondary" type="button" data-i18n="addDomainButton">Add Domain/Path</button>
+            <button id="removeDomainBtn" class="btn secondary" type="button" data-i18n="removeDomainButton" style="display: none;">Remove</button>
+          </div>
+          <p class="hint" data-i18n="domainHint">Select a domain or domain+path to customize the template for specific websites. Examples: "google.com", "mail.google.com", "youtube.com/watch"</p>
+        </div>
+
         <label class="label" for="template"><span data-i18n="templateLabel">Template</span></label>
         <textarea id="template" class="textarea" rows="6" spellcheck="false"></textarea>
 
@@ -46,6 +58,10 @@
             <h2 class="h2" data-i18n="previewLabel">Preview</h2>
             <p class="hint" data-i18n="previewHint">This is a preview using sample title and URL.</p>
           </div>
+        </div>
+        <div class="preview-url-row">
+          <label class="label" for="previewUrl">Sample URL:</label>
+          <input id="previewUrl" class="input" type="text" placeholder="https://example.com" />
         </div>
         <textarea id="preview" class="textarea preview" rows="6" readonly></textarea>
       </section>

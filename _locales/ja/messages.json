@@ -61,5 +61,41 @@
   },
   "openModePopup": {
     "message": "ポップアップ"
+  },
+  "domainLabel": {
+    "message": "ドメイン/パス別テンプレート"
+  },
+  "defaultTemplateOption": {
+    "message": "デフォルト（すべてのドメイン）"
+  },
+  "addDomainButton": {
+    "message": "ドメイン/パスを追加"
+  },
+  "removeDomainButton": {
+    "message": "削除"
+  },
+  "domainHint": {
+    "message": "特定のウェブサイト用にテンプレートをカスタマイズする場合はドメインまたはドメイン+パスを選択してください。例: \"google.com\", \"mail.google.com\", \"youtube.com/watch\""
+  },
+  "addDomainPrompt": {
+    "message": "ドメインまたはドメイン+パスを入力してください（例: example.com, mail.google.com, youtube.com/watch）:"
+  },
+  "invalidDomain": {
+    "message": "無効な形式です。example.com または example.com/path の形式で入力してください。"
+  },
+  "domainAdded": {
+    "message": "ドメイン/パスを追加しました（保存して適用）"
+  },
+  "removeDomainConfirm": {
+    "message": "以下のテンプレートを削除しますか:"
+  },
+  "domainRemoved": {
+    "message": "ドメイン/パスを削除しました（保存して適用）"
+  },
+  "resetConfirm": {
+    "message": "すべての設定をデフォルトに戻しますか？\nドメイン/パス別テンプレートもすべて削除されます。"
+  },
+  "previewUrlLabel": {
+    "message": "サンプルURL:"
   }
 }
