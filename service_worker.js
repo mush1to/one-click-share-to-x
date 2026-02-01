@@ -7,7 +7,8 @@ const SETTINGS_KEY = "settings";
 const DEFAULT_SETTINGS = {
   languageChoice: "system",   // "system" | "en" | "ja" | ...
   template: "{title}\n{url}",
-  hashtags: ""
+  hashtags: "",
+  domainTemplates: {}  // { "example.com": "template", "example.com/path": "template", ... }
 };
 
 async function getSettings() {
@@ -21,8 +22,61 @@ function normalizeTemplateNewlines(s) {
   return s.replace(/\\n/g, "\n").replace(/\/n/g, "\n");
 }
 
+function parseUrl(url) {
+  try {
+    const urlObj = new URL(url);
+    return {
+      hostname: urlObj.hostname,
+      pathname: urlObj.pathname
+    };
+  } catch {
+    return { hostname: "", pathname: "" };
+  }
+}
+
+function getTemplateForUrl(settings, url) {
+  const { hostname, pathname } = parseUrl(url);
+  if (!hostname) return settings.template || DEFAULT_SETTINGS.template;
+  
+  const templates = settings.domainTemplates || {};
+  
+  // Priority 1: Full match (hostname + pathname, e.g., "google.com/test")
+  // Try exact pathname match first
+  const fullPath = hostname + pathname;
+  if (templates[fullPath]) {
+    return templates[fullPath];
+  }
+  
+  // Try pathname prefix matches (e.g., "google.com/test" matches "google.com/test/page")
+  // Sort keys by length (longer = more specific) to check most specific first
+  const pathKeys = Object.keys(templates)
+    .filter(key => key.startsWith(hostname + '/') && pathname.startsWith(key.substring(hostname.length)))
+    .sort((a, b) => b.length - a.length);
+  
+  if (pathKeys.length > 0) {
+    return templates[pathKeys[0]];
+  }
+  
+  // Priority 2: Exact hostname match (e.g., "mail.google.com")
+  if (templates[hostname]) {
+    return templates[hostname];
+  }
+  
+  // Priority 3: Parent domain match (e.g., "blog.example.com" -> "example.com")
+  const parts = hostname.split('.');
+  if (parts.length > 2) {
+    const parentDomain = parts.slice(-2).join('.');
+    if (templates[parentDomain]) {
+      return templates[parentDomain];
+    }
+  }
+  
+  // Priority 4: Default template
+  return settings.template || DEFAULT_SETTINGS.template;
+}
+
 function buildPostText({ title, url }, settings) {
-  const templateRaw = settings.template || DEFAULT_SETTINGS.template;
+  const templateRaw = getTemplateForUrl(settings, url);
   const template = normalizeTemplateNewlines(templateRaw);
 
   const hashtags = (settings.hashtags || "").trim();
